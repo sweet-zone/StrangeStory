@@ -19,6 +19,11 @@ storiesOf('Button', module)
     template: '<my-button @click="action">Hello Button</my-button>',
     methods: { action: action('clicked') },
   }))
+  .add('large button', () => ({
+    components: { MyButton },
+    template: '<my-button :large="true" @click="action">Large Button</my-button>',
+    methods: { action: action('clicked2') },
+  }))
   .add('with JSX', () => ({
     components: { MyButton },
     render(h) {
